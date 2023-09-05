@@ -1,3 +1,3 @@
 tr = "Holberton School"
-print(tr+tr+tr)
+print(str+str+str)
 print(str[:9])
