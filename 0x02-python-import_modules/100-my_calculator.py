@@ -11,12 +11,12 @@ if __name__ == "__main__":
 
     a = int(sys.argv[1])
     b = int(sys.argv[3])
-    av = sys.argv[2]
+    op = sys.argv[2]
 
-    dic = {"+": add, "-": sub, "*": mul, "/": div}
+    op = {"+": add, "-": sub, "*": mul, "/": div}
 
-    if av not in dic:
-        print("Unknown dic. Available operators: +, -, * and /")
+    if av not in op:
+        print("Unknown op. Available operators: +, -, * and /")
         sys.exit(1)
 
-    print("{} {} {} = {}".format(a, av, b, dic[av](a, b)))
+    print("{} {} {} = {}".format(a, av, b, op[av](a, b)))
