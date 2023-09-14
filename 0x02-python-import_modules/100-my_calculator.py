@@ -13,10 +13,10 @@ if __name__ == "__main__":
     b = int(sys.argv[3])
     op = sys.argv[2]
 
-    op = {"+": add, "-": sub, "*": mul, "/": div}
+    dic = {"+": add, "-": sub, "*": mul, "/": div}
 
-    if av not in op:
+    if op not in dic:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
 
-    print("{} {} {} = {}".format(a, av, b, op[av](a, b)))
+    print("{} {} {} = {}".format(a, op, b, dic[op](a, b)))
