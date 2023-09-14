@@ -16,7 +16,7 @@ if __name__ == "__main__":
     op = {"+": add, "-": sub, "*": mul, "/": div}
 
     if av not in op:
-        print("Unknown op. Available operators: +, -, * and /")
+        print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
 
     print("{} {} {} = {}".format(a, av, b, op[av](a, b)))
