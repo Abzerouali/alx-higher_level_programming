@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Defines a custom list class MyList that inherits from the built-in list class."""
+"""Defines a custom list class MyList"""
+
+
 class MyList(list):
     """Implements sorted printing for the built-in list class."""
 
