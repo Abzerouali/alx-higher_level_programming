@@ -1,0 +1,61 @@
+==============================
+The ``7-base_geometry`` module
+==============================
+
+=========================================================================
+Using the ``integer_validator`` function
+
+Usage: integer_validator("str", int)
+
+where:
+- str is the name of the value to be validated, and is of type string
+- int is the value to be validated and must be an integer
+=========================================================================
+
+=========================================================================
+This is a test-suite for the ``integer_validator`` method of the class
+``BaseGeometry``
+=========================================================================
+
+==========
+First, the module is imported:
+
+       >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+==========
+
+==========
+An instance of the class ``BaseGeometry`` is then created:
+
+   >>> bg = BaseGeometry()
+
+==========
+The function is then tested with an integer as the value of the function:
+
+    >>> try:
+    ...     bg.integer_validator("my_int", 12)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    ...
+
+No exception is raised
+==========
+Again, a larger integer is passed as the second argument to the function
+
+       >>> try:
+       ...     bg.integer_validator("width", 1024)
+       ... except Exception as e:
+       ...     print("[{}] {}".format(e.__class__.__name__, e))
+       ...
+
+No exception is raised
+==========
+
+==========
+A string is passed as the value of the function:
+  >>> try:
+  ...     bg.integer_validator("name", "John")
+  ... except Exception as e:
+  ...     print("[{}] {}".format(e.__class__.__name__, e))
+  ...
+
